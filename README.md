@@ -1,3 +1,3 @@
-制作中
+制作中 ...
 
-[<img src="./images/sukusho.png" width="400">]
+<img src="./images/sukusho2.png" width="400">
