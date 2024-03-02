@@ -151,22 +151,3 @@ class LCD_font():
                 # ドットを描く
                 pygame.draw.rect(self.screen, color, Rect(org1[0], org1[1], block_size, block_size))
                 i += 1
-
-    def update_col(self, col=0, code=2):  # ある桁にある文字を表示する関数
-        # codeの文字をcol桁目に表示、桁は最上位桁の左から右へ進む。
-        block_size = self.BLOCK_SIZE
-        i = 0
-        for y in range(7):
-            for x in range(5):
-                if LCD_font_styles[int(code)][i] == 1:
-                    color = self.COLOR_ON
-                else:
-                    color = self.COLOR_OFF
-                # 桁の原点
-                x0 = self.X_ORG + self.COL_INTV * col
-                y0 = self.Y_ORG
-                # ドットの原点座標
-                org1 = (x0 + x * self.BLOCK_INTV, y0 + y * self.BLOCK_INTV)
-                # ドットを描く
-                pygame.draw.rect(self.screen, color, Rect(org1[0], org1[1], block_size, block_size))
-                i += 1
