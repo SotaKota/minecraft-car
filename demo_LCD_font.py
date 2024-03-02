@@ -22,7 +22,7 @@ pygame.display.set_caption("LCD font")
 
 clock = pygame.time.Clock()
 
-font1 = pygame.freetype.Font("fonts/natumemozi.ttf", 48)
+font1 = pygame.freetype.Font("fonts/NikkyouSans-mLKax.ttf", 48)
 
 lcd1 = LCD_font(screen)
 lcd1.init_col(BLOCK_SIZE=7, BLOCK_INTV=8, COLOR_ON=GREEN, COLOR_OFF=GRAY)
@@ -30,13 +30,14 @@ lcd1.init_row(X_ORG=8, Y_ORG=8, COL_INTV=6)
 
 
 def LCD_display(x, y):
-    code = int((x / 8) % 3)
+    code = int((x / 8) % 4)
     text1, rect1 = font1.render(str(code), WHITE)
     rect1.center = (x, y)
     screen.blit(text1, rect1)
     # LCD sim
-    lcd1.update_col(col=0, code=code)
-
+    lcd1.update_col(col=1, code=code)
+    lcd1.update_col(col=2, code=(code + 1) % 4)
+    lcd1.update_col(col=3, code=(code + 2) % 4)
 
 def infinite_loop():
     x = WINDOW_WIDTH * 0.5

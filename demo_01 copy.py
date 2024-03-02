@@ -16,7 +16,7 @@ while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
- 
+
     screen.fill((238, 238, 170))  # back ground color
 
     pygame.draw.circle(screen, (176, 176, 222), (320, 240), 120)
@@ -35,11 +35,7 @@ while running:
     pygame.draw.rect(screen, color_on, Rect(24 + x1 * 16, 24 + y1 * 16, 12, 12))
     x1 += 1
     if x1 > 4:
-        y1 +=1
         x1 =0
-    if y1 > 6:
-        y1 =0
-
 
     pygame.display.flip()  # update
     clock.tick(5)  # FPS, Frame Per Second
