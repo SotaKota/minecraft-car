@@ -1,0 +1,3 @@
+マイクラ世界に制作中 ...
+
+<img src="./images/sukusho2.png" width="400">
