@@ -1,3 +1,4 @@
-マイクラ世界に制作中 ...
+マイクラ世界に車を出して動かすことができます。
+自分の好きなようにカスタムすることもできます。
 
-<img src="./images/sukusho2.png" width="400">
+<img src="./image/car.png" width="400">
